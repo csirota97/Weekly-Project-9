@@ -1,10 +1,10 @@
 import socket
-#from pynput.mouse import Button, Controller
+from pynput.mouse import Button, Controller
 
 
 
 def main():
-	#mouse = Controller()
+	mouse = Controller()
 
 	host = socket.getfqdn()
 	print(host)
@@ -22,8 +22,8 @@ def main():
 		print("Message from: " + str(addr))
 		print("From user: " + data)
 
-		#msg = data[1:-1]
-		#mouse.position = (int(msg.split(',')[0]),int(msg.split(',')[1]))
+		msg = data[1:-1]
+		mouse.position = (int(msg.split(',')[0]),int(msg.split(',')[1]))
 
 	c.close()
 
